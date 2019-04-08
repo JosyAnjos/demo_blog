@@ -33,8 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Make erros better looking
-gem 'better_errors'
+
 
 # Bulma Css
 gem 'bulma-rails'
@@ -64,7 +63,10 @@ group :development do
   gem 'guard'
 
 # Guard livereload automaticaly reloads your browser when view files are modified
-  gem 'guard-livereload'
+  gem 'guard-livereload', require: false
+
+  # Make erros better looking
+gem 'better_errors'
 end
 
 group :test do
