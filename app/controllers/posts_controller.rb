@@ -19,11 +19,9 @@ class PostsController < ApplicationController
 		end
 	end
 
-	def show
-	end
+	def show; end
 
 	def update
-
 		if @post.update(post_params)
 			redirect_to @post
 		else
@@ -40,7 +38,6 @@ class PostsController < ApplicationController
 		@post.destroy
 
 		redirect_to posts_path
-
 	end
 
 	private
@@ -49,8 +46,7 @@ class PostsController < ApplicationController
 		params.require(:post).permit(:title, :content)
 	end
 
-	 def find_post
-	 	@post = Post.find(params[:id])
-	 end
-
+  def find_post
+  	@post = Post.find(params[:id])
+  end
 end
